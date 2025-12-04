@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — BloomCTRL</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="logo">
+      <img src="images/BloomC-lOGO.png" alt="BloomCTRL logo" />
+      <span class="brand"></span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="early-access.html">Early Access</a></li>
+        <li><a href="">Log In</a></li>
+        <li><a href="" class="btn btn-primary">Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="section container">
+    <h1>Support</h1>
+    <p>Questions, feedback, or ideas? We’re here to help you keep things calm and moving.</p>
+
+    <form class="form-card" style="margin-top: 1rem;">
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your name" required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="How can we help?"></textarea>
+
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </main>
+<footer class="site-footer">
+  <div class="inner container">
+    <CENTER><p>© BloomCTRL</p></CENTER>
+  </div>
+
+</footer>
+<script>
+document.querySelector("form")?.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.querySelector("#name")?.value.trim();
+  const email = document.querySelector("#email")?.value.trim();
+
+  if (name) localStorage.setItem("bloomctrlName", name);
+  if (email) localStorage.setItem("bloomctrlEmail", email);
+
+  // Redirect to thank-you page
+  if (window.location.pathname.includes("early-access")) {
+    window.location.href = "early-access-thank-you.html";
+  } else {
+    window.location.href = "support-confirmation.html";
+  }
+});
+</script>
+
+</body>
+</html>

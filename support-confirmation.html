@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support ticket received | BloomCTRL</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="inner">
+      <a href="index.html" class="logo">
+        <img src="images/BloomC-lOGO.png" alt="BloomCTRL logo" />
+        <span class="brand"></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container">
+    <div class="form-card">
+      <h1>Thanks,we’ve got your message</h1>
+      <p>Your support ticket was submitted successfully. We’ll follow up via email as soon as possible.</p>
+
+      <div style="margin-top:0.75rem;">
+        <p class="desc">In the meantime, you can browse FAQs, explore features, or return to the homepage.</p>
+      </div>
+
+      <div style="margin-top:1rem;">
+        <a class="btn btn-primary" href="support.html">Back to Support</a>
+        <a class="btn btn-ghost" href="features.html" style="margin-left:0.5rem;">Explore Features</a>
+        <a class="btn btn-ghost" href="index.html" style="margin-left:0.5rem;">Home</a>
+      </div>
+    </div>
+
+    <section class="section" aria-label="Brand preview">
+      <div class="merch-showcase">
+        <article class="card">
+          <img src="images/hoodie.png" alt="Signature Hoodie" />
+          <h3>Signature Hoodie <span class="price">$48</span></h3>
+          <p class="desc">Soft, breathable, sage‑lavender palette.</p>
+          <span class="badge">Coming Soon</span>
+        </article>
+
+        <article class="card">
+          <img src="images/tote.png" alt="Mindful Tote" />
+          <h3>Mindful Tote <span class="price">$22</span></h3>
+          <p class="desc">Durable canvas with BloomCTRL mark.</p>
+          <span class="badge">Coming Soon</span>
+        </article>
+        
+        <article class="card">
+          <img src="images/bottle.png" alt="Focus Bottle set" />
+          <h3>Focus Bottle <span class="price">$28</span></h3>
+          <p class="desc">Double‑walled, daily hydration tracker.</p>
+          <span class="badge">Coming Soon</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner container">
+     <CENTER><p>© BloomCTRL</p></CENTER>
+    </div>
+  </footer>
+  <script>
+window.addEventListener("DOMContentLoaded", () => {
+  const name = localStorage.getItem("bloomctrlName");
+  const email = localStorage.getItem("bloomctrlEmail");
+
+  const heading = document.querySelector("h1");
+  const para = document.querySelector("p");
+
+  if (name && heading) {
+    heading.textContent = `Thank you, ${name}! 🌿`;
+  }
+  if (email && para) {
+    para.textContent += ` We’ll reach out to you at ${email}.`;
+  }
+});
+</script>
+
+</body>
+</html>

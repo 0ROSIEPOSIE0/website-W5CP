@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you | BloomCTRL</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="inner">
+      <a href="index.html" class="logo">
+        <img src="images/BloomC-lOGO.png" alt="BloomCTRL logo" />
+        <span class="brand"></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container">
+    <div class="form-card">
+      <h1>You're on the list!</h1>
+      <p>Thanks for joining BloomCTRL Early Access. We’ll email you when drops and new tools go live.</p>
+
+      <div class="promo-banner" style="margin-top:1rem;">
+        Use code <span class="code">BLOOMFREE</span> for free shipping.
+      </div>
+
+      <div style="margin-top:1rem;">
+        <a class="btn btn-primary" href="index.html">Return to Home</a>
+        <a class="btn btn-ghost" href="features.html" style="margin-left:0.5rem;">Explore Features</a>
+      </div>
+    </div>
+
+  <footer class="site-footer">
+    <div class="inner container">
+      <CENTER><p>© BloomCTRL</p></CENTER>
+    </div>
+  </footer>
+  <script>
+        window.addEventListener("DOMContentLoaded", () => {
+        const name = localStorage.getItem("bloomctrlName");
+        const email = localStorage.getItem("bloomctrlEmail");
+
+        const heading = document.querySelector("h1");
+        const para = document.querySelector("p");
+
+        if (name && heading) {
+        heading.textContent = `Thank you, ${name}! 🌿`;
+        }
+        if (email && para) {
+        para.textContent += ` We’ll reach out to you at ${email}.`;
+        }
+    });
+    </script>
+
+</body>
+</html>

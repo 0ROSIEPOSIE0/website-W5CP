@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Early Access — BloomCTRL</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="logo">
+      <img src="images/BloomC-lOGO.png" alt="BloomCTRL logo" />
+      <span class="brand"></span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="early-access.html">Early Access</a></li>
+        <li><a href="">Log In</a></li>
+        <li><a href="" class="btn btn-primary">Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+   <main class="section container">
+    <h1>Join Early Access</h1>
+    <p>Sign up to be first in line for drops, guided tools, and calm productivity updates.</p>
+
+    <form class="form-card" style="margin-top: 1rem;">
+      <label for="ea-email">Email</label>
+      <input id="ea-email" type="email" placeholder="you@example.com" required />
+
+      <label for="ea-consent">
+        <input id="ea-consent" type="checkbox" required />
+        I agree to receive updates about BloomCTRL.
+      </label>
+
+      <button class="btn btn-primary" type="submit">Request Access</button>
+    </form>
+
+
+<footer class="site-footer">
+  <div class="inner container">
+    <center><p>© BloomCTRL </p></center>
+  </div>
+</footer>
+<script>
+document.querySelector("form")?.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const path = window.location.pathname.includes("early-access")
+    ? "early-access-thank-you.html"
+    : "support-confirmation.html";
+  // Basic validation could go here
+  window.location.href = path;
+});
+</script>
+
+</body>
+</html>
